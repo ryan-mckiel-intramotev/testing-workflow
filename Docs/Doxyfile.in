@@ -1,0 +1,44 @@
+PROJECT_NAME           = "Documentation1"
+PROJECT_NUMBER         = 
+HTML_HEADER            = 
+HTML_FOOTER            =
+INPUT                  = 
+GENERATE_LATEX         = NO
+OPTIMIZE_OUTPUT_FOR_C  = YES
+RECURSIVE              = YES
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        = @PROJECT_SOURCE_DIR@
+MARKDOWN_SUPPORT       = YES
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+EXCLUDE_PATTERNS       = */src/targets/* # exclude stm hal
+INCLUDE_GRAPH          = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+HAVE_DOT               = YES
+PLANTUML_JAR_PATH      = @PLANTUML_JAR_PATH@
+
+# docs variables
+ALIASES               += github_url=@DOXYGEN_PROJECT_URL@/
+ALIASES               += github_url{1}=@DOXYGEN_PROJECT_URL@/\1
+
+# docs variables
+ALIASES               += github_url=@DOXYGEN_PROJECT_URL@/"
+ALIASES               += github_url{1}=@DOXYGEN_PROJECT_URL@/\1"
+
+# env based configuration
+GENERATE_XML           = $(DOXYGEN_XML)
+OUTPUT_DIRECTORY       = Docs
+
+# doxygen awesome related configuration
+GENERATE_TREEVIEW      = YES # required!
+DISABLE_INDEX          = NO
+FULL_SIDEBAR           = NO
+HTML_EXTRA_STYLESHEET  = Docs/doxygen-awesome-css/doxygen-awesome.css \
+                        Docs/doxygen-awesome-css/doxygen-awesome-sidebar-only.css
+                        
+HTML_EXTRA_FILES       = 
+      
+HTML_COLORSTYLE        = LIGHT # required with Doxygen >= 1.9.5
