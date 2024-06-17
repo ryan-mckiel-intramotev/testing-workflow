@@ -33,7 +33,7 @@ jobs:
         shell: bash
 
       - name: Remove Files
-        run: rm md__home_runner_work_testing_workflow_testing_workflow_Docs_doxygen_awesome_css_docs_customization.html
+        run: rm Docs/html/md__home_runner_work_testing_workflow_testing_workflow_Docs_doxygen_awesome_css_docs_customization.html
         shell: bash
         
       - name: Deploy 🚀
