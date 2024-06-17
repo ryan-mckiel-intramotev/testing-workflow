@@ -32,9 +32,9 @@ jobs:
         run: doxygen Docs/Doxyfile.in
         shell: bash
 
-      # - name: Add text to file
-      #   run: echo "// This is some text comment" >> Docs/html/navtreedata.js
-      #   shell: bash
+      - name: Remove Files
+        run: rm md__home_runner_work_testing_workflow_testing_workflow_Docs_doxygen_awesome_css_docs_customization.html
+        shell: bash
         
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
