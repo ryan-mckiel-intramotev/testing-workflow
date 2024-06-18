@@ -1,3 +1,3 @@
-li:has(+ div.item:has(+ span.label:has(+ a.md__home_runner_work_testing_workflow_testing_workflow_Docs_doxygen_awesome_css_docs_tricks.html))) {
-  display: none;
+li:has(> a.md__home_runner_work_testing_workflow_testing_workflow_Docs_doxygen_awesome_css_docs_tricks.html) {
+  display: none !important;
 }
