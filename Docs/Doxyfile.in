@@ -37,7 +37,8 @@ GENERATE_TREEVIEW      = YES # required!
 DISABLE_INDEX          = NO
 FULL_SIDEBAR           = NO
 HTML_EXTRA_STYLESHEET  = Docs/doxygen-awesome-css/doxygen-awesome.css \
-                        Docs/doxygen-awesome-css/doxygen-awesome-sidebar-only.css
+                        Docs/doxygen-awesome-css/doxygen-awesome-sidebar-only.css \
+                        Docs/customNav.css
                         
 HTML_EXTRA_FILES       = 
       
