@@ -32,11 +32,23 @@ jobs:
         run: doxygen Docs/Doxyfile.in
         shell: bash
 
-      - name: Remove Files
-        run: rm Docs/html/md__home_runner_work_testing_workflow_testing_workflow_Docs_doxygen_awesome_css_docs_customization.html
-        shell: bash
+      # - name: Remove Files
+      #   run: rm Docs/html/md__home_runner_work_testing_workflow_testing_workflow_Docs_doxygen_awesome_css_docs_customization.html
+      #   shell: bash
         
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      # - name: Deploy 🚀
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     folder: Docs/html # The folder the action should deploy.
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          folder: Docs/html # The folder the action should deploy.
+          path: 'Docs/html'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
